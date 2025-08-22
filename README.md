@@ -62,39 +62,55 @@ SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.BOUNCE, 1000);
 ### All Animations
 
 ```java
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FADE_IN);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FADE_OUT);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.BOUNCE);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.ZOOM_IN);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.ZOOM_OUT);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.SLIDE_UP);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.SLIDE_DOWN);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.SLIDE_LEFT);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.SLIDE_RIGHT);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.ROTATE);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.SHAKE);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FLASH);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.PULSE);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.RUBBER_BAND);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.SWING);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.TADA);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.WOBBLE);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.BOUNCE_IN_LEFT);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.BOUNCE_IN_RIGHT);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.BOUNCE_IN_UP);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.BOUNCE_IN_DOWN);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FADE_IN_LEFT);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FADE_IN_RIGHT);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FADE_IN_UP);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FADE_IN_DOWN);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FADE_OUT_LEFT);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FADE_OUT_RIGHT);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FADE_OUT_UP);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.FADE_OUT_DOWN);
-SmartAnimUtils.animate(view, SmartAnimUtils.AnimationType.ZOOM_IN_ROTATE);
+// Show / Hide
+SmartAnimUtils.animateShowFromCenter(view, 600);
+SmartAnimUtils.animateHideToCenter(view, 600);
+
+// Slide In
+SmartAnimUtils.animSlideInFromLeft(view, 600);
+SmartAnimUtils.animSlideInFromRight(view, 600);
+SmartAnimUtils.animSlideInFromTop(view, 600);
+SmartAnimUtils.animSlideInFromBottom(view, 600);
+
+// Slide Out
+SmartAnimUtils.slideOutLeft(view, 600);
+SmartAnimUtils.slideOutRight(view, 600);
+SmartAnimUtils.slideOutUp(view, 600);
+SmartAnimUtils.slideOutDown(view, 600);
+
+// Fade
+SmartAnimUtils.fadeIn(view, 600);
+SmartAnimUtils.fadeOut(view, 600);
+
+// Zoom
+SmartAnimUtils.zoomIn(view, 600);
+SmartAnimUtils.zoomOut(view, 600);
+
+// Rotate
+SmartAnimUtils.rotateClockwise(view, 600);
+SmartAnimUtils.rotateCounterClockwise(view, 600);
+SmartAnimUtils.flipHorizontal(view, 600);
+SmartAnimUtils.flipVertical(view, 600);
+
+// Bounce / Shake
+SmartAnimUtils.bounce(view, 600);
+SmartAnimUtils.shake(view, 600);
+SmartAnimUtils.animatePopUpBounce(view, 600);
+SmartAnimUtils.animatePopUp(view, 600);
+
+// Special Effects
+SmartAnimUtils.flash(view, 600);
+SmartAnimUtils.blink(view, 600);
+SmartAnimUtils.pulse(view, 600);
+SmartAnimUtils.swing(view, 600);
+SmartAnimUtils.tada(view, 600);
+SmartAnimUtils.wobble(view, 600);
+SmartAnimUtils.heartbeat(view, 600);
+SmartAnimUtils.dropOut(view, 600);
 
 // Reset any animation and transformations
 SmartAnimUtils.resetAnimations(view);
+
 ```
 
 ---
@@ -124,4 +140,5 @@ The software is provided "as is", without warranty of any kind.
 Open issues or pull requests on GitHub.
 
 Suggestions for new animations are welcome.
+
 
