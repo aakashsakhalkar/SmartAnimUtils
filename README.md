@@ -141,7 +141,11 @@ The software is provided "as is", without warranty of any kind.
 
 Open issues or pull requests on GitHub.
 
+## Demo APK 📱
+👉 [Download Release APK](https://github.com/aakashsakhalkar/SmartAnimUtils/releases)
+
 Suggestions for new animations are welcome.
+
 
 
 
