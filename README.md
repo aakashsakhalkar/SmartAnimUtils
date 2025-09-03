@@ -1,3 +1,5 @@
+![AuroraTextView Demo](screenshot.png)
+
 # SmartAnimUtils
 
 A lightweight Android library providing 30 ready-to-use animations for Views.
@@ -140,5 +142,6 @@ The software is provided "as is", without warranty of any kind.
 Open issues or pull requests on GitHub.
 
 Suggestions for new animations are welcome.
+
 
 
