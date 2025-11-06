@@ -109,6 +109,8 @@ SmartAnimUtils.tada(view, 600);
 SmartAnimUtils.wobble(view, 600);
 SmartAnimUtils.heartbeat(view, 600);
 SmartAnimUtils.dropOut(view, 600);
+SmartAnimUtils.animateRingaRingaRoses(demoBox, 700);
+SmartAnimUtils.animateRotateInPlace(demoBox, 700);
 
 // Reset any animation and transformations
 SmartAnimUtils.resetAnimations(view);
@@ -145,6 +147,7 @@ Open issues or pull requests on GitHub.
 👉 [Download Release APK](https://github.com/aakashsakhalkar/SmartAnimUtils/releases)
 
 Suggestions for new animations are welcome.
+
 
 
 
