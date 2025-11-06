@@ -2,6 +2,7 @@ package com.aakash.smartanimutils;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.BounceInterpolator;
@@ -347,6 +348,45 @@ public class SmartAnimUtils {
         view.setTranslationY(0f);
         view.setRotation(0f);
         view.setVisibility(View.VISIBLE);
+    }
+
+
+ public static void animateRingaRingaRoses(View view, long duration) {
+        // Create a ValueAnimator that loops forever
+        ValueAnimator animator = ValueAnimator.ofFloat(0f, 360f);
+        animator.setDuration(duration);
+        animator.setInterpolator(new LinearInterpolator());
+        animator.setRepeatCount(ValueAnimator.INFINITE);
+
+        // The radius of the circular motion (in pixels)
+        final float radius = 20f; // tweak this for bigger/smaller circles
+
+        animator.addUpdateListener(animation -> {
+            float angle = (float) animation.getAnimatedValue();
+
+            // Convert angle to radians
+            double radians = Math.toRadians(angle);
+
+            // Calculate X and Y offsets for circular motion
+            float translationX = (float) (Math.cos(radians) * radius);
+            float translationY = (float) (Math.sin(radians) * radius);
+
+            // Apply both rotation and small circular translation
+            view.setTranslationX(translationX);
+            view.setTranslationY(translationY);
+            view.setRotation(angle);
+        });
+
+        animator.start();
+    }public static void animateRotateInPlace(View view, long duration) {
+        // Continuous rotation animation
+        view.animate()
+                .rotationBy(360f)
+                .setDuration(duration)
+                .setInterpolator(new LinearInterpolator())
+                .setListener(null)
+                .withEndAction(() -> animateRotateInPlace(view, duration)) // repeat infinitely
+                .start();
     }
 }
 

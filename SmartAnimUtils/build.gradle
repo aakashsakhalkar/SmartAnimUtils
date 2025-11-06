@@ -32,14 +32,6 @@ android {
     }
 }
 
-dependencies {
-    implementation libs.appcompat
-    implementation libs.material
-    testImplementation libs.junit
-    androidTestImplementation libs.ext.junit
-    androidTestImplementation libs.espresso.core
-}
-
 publishing {
     publications {
         release(MavenPublication) {
@@ -49,7 +41,7 @@ publishing {
 
             groupId = 'com.github.aakashsakhalkar'
             artifactId = 'smartanimutils'
-            version = '1.0.0'
+            version = 'v2.0.0'
         }
     }
 }

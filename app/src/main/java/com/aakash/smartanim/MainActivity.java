@@ -11,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aakash.smartanimutils.SmartAnimUtils;
+
 public class MainActivity extends AppCompatActivity {
     private View demoBox;
     private RecyclerView recyclerView;
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             "FlipHorizontal", "FlipVertical", "ZoomIn", "ZoomOut",
             "Shake", "Bounce", "Blink", "Pulse", "Swing", "Wobble",
             "Flash", "Tada", "Heartbeat", "DropOut", "SlideOutLeft",
-            "SlideOutRight", "SlideOutUp", "SlideOutDown"
+            "SlideOutRight", "SlideOutUp", "SlideOutDown", "RingaRingaRoses", "RotateInPlace"
     };
 
     @Override
@@ -39,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        recyclerView.setAdapter(new AnimAdapter(animations, this::runAnimation));
+        recyclerView.setAdapter(new AnimAdapter(animations, this::runAnimation));
     }
 
-    /*private void runAnimation(String name) {
+    private void runAnimation(String name) {
         SmartAnimUtils.resetAnimations(demoBox);
         switch (name) {
             case "ShowFromCenter":
@@ -135,6 +137,12 @@ public class MainActivity extends AppCompatActivity {
             case "SlideOutDown":
                 SmartAnimUtils.slideOutDown(demoBox, 700);
                 break;
+            case "RingaRingaRoses":
+                SmartAnimUtils.animateRingaRingaRoses(demoBox, 700);
+                break;
+            case "RotateInPlace":
+                SmartAnimUtils.animateRotateInPlace(demoBox, 700);
+                break;
         }
-    }*/
+    }
 }
