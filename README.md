@@ -38,7 +38,7 @@ In your **app module `build.gradle`**:
 
 ```gradle
 dependencies {
-    implementation 'com.github.aakashsakhalkar:SmartAnimUtils:1.0.1'
+      implementation 'com.github.aakashsakhalkar:SmartAnimUtils:v2.0.0'
 }
 ```
 
@@ -145,6 +145,7 @@ Open issues or pull requests on GitHub.
 👉 [Download Release APK](https://github.com/aakashsakhalkar/SmartAnimUtils/releases)
 
 Suggestions for new animations are welcome.
+
 
 
 
